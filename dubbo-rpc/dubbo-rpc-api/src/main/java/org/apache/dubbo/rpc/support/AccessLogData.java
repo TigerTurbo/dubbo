@@ -240,7 +240,7 @@ public final class AccessLogData {
 
         Object[] args = get(ARGUMENTS) != null ? (Object[]) get(ARGUMENTS) : null;
         if (args != null && args.length > 0) {
-            sn.append(JSON.toJSONString(args, SerializerFeature.IgnoreNonFieldGetter));
+            sn.append(JSON.toJSONString(args, SerializerFeature.IgnoreErrorGetter));
         }
 
         return sn.toString();
